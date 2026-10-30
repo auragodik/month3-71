@@ -11,7 +11,7 @@ BOT_TOKEN = "8863916144:AAH6TJLyvd96XoEGEVq5ArI3a0v_Sk-EfI4"
 
 
 bot = Bot(token=BOT_TOKEN)
-dp = Dispatcher()     # обработчик входящих обновлений
+dp = Dispatcher() 
 
 
 @dp.message(CommandStart())
@@ -46,7 +46,7 @@ async def cmd_group(message: Message):
 
 # @dp.message(F.from_user.id == 1288365917)
 # async def cmd_group(message: Message):
-#     await message.answer("Привет мой создатель!!!")
+#     await message.answer("Привет создатель!")
 
 
 @dp.message()
@@ -55,7 +55,7 @@ async def echo(message: Message):
 
 
 async def main():
-    await dp.start_polling(bot)     # отправляет запросы на тг-сервер
+    await dp.start_polling(bot)
 
 
 if __name__ == "__main__":
